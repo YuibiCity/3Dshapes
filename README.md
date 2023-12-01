@@ -1,4 +1,3 @@
-# 3Dshapes
 'Computational Physics: 3rd ed.'
 
 Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational Physics: Problem Solving with Python (3rd ed.) (Y. Koyanagi et al., Trans. (2018), 実践Pythonライブラリー 計算物理学I. 朝倉書店).
