@@ -15,6 +15,6 @@ VPythonのバージョンが変わったのか、テキスト通りのコード�
 私が途中で飽きるかもしれませんが、場合によっては少しずつ更新します。
 拙いreadmeですみません。問題点があればぜひご指摘ください。
 連絡先
-  X: @YuibiCity
+  X: @YuibiCity,
   Mail: keiichi.kyogoku@gmail.com
   京極慶一
