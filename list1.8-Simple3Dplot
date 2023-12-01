@@ -1,0 +1,26 @@
+#変更点１：L17でsubplot関数を導入。これがないとウィンドウはポップアップされたがグラフが表示されなかった。
+#変更点２：ワイヤーフレームの赤が濃いのでlw(linewidth,線の太さ)とalpha(透明度)を0.5に指定。なくても良い。
+#注記：subplot関数の引数は、今回の表示させたいグラフが1つであるため「111」である。
+
+import matplotlib.pylab as p
+from mpl_toolkits.mplot3d import Axes3D
+
+print("Please be patient, I have packages to import & points to plot")
+delta = 0.1
+x = p.arange ( -3., 3., delta )
+y = p.arange ( -3., 3., delta )
+X,Y = p.meshgrid ( x, y )
+Z = p.sin (X) * p.cos (Y)
+
+fig = p.figure()
+ax = Axes3D(fig)
+ax = fig.add_subplot(111, projection='3d')
+ax.plot_surface (X, Y, Z )
+ax.plot_wireframe (X, Y, Z, color = 'r', lw =0.5, alpha =0.5)
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+
+p.show()
+
+
