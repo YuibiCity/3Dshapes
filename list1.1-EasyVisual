@@ -1,18 +1,23 @@
 #EasyVisual
-#注記：単に実行すると、Plot1のみが描画されるか、あるいは同じグラフにPlot2も描画されテキスト図1.2の通りにはいきませんでした。
-#注記：私は最低限の描画はできたものとして次のステップに進んでいますが、別のプログラムとして分離させても良いかもしれません。
+#変更点１：パッケージ'visual.graph'を'vpython'に書き換え。
+#変更点２：gdisplay関数は使えなくなったようなのでgraph関数で代用。
+
+#注記１：ChatGPTから'from numpy import arange, cos, exp'の記述を提案されたが、なくても実行できたので不採用。
+#注記２：作成された図ではx/y軸が強調されていませんが、このまま次のステップへ進みました。改善点あればご教示ください。
+
 
 from vpython import *
-from numpy import arange, cos, exp
 
-# 新しい graph 関数を使用してグラフを作成
-graph1 = graph(width=600, height=450, title="Visual 2D Plot", xtitle="x", ytitle="f(x)", foreground=color.black, background=color.white)
-
-# gcurve と gdots の使用
 Plot1 = gcurve(color=color.black)
 for x in arange(0., 8.1, 0.1):
     Plot1.plot(pos=(x, 5.*cos(2.*x)*exp(-0.4*x)))
 
+graph1 = graph(width=600, height=450, title="Visual 2D Plot", xtitle="x", ytitle="f(x)", foreground=color.black, background=color.white)
+
+
 Plot2 = gdots(color=color.black)
+
 for x in arange(-5., +5, 0.1):
     Plot2.plot(pos=(x, cos(x)))
+
+
