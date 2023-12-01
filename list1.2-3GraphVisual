@@ -1,0 +1,20 @@
+#3GraphVisual
+#変更点１：パッケージ'visual', 'visual.graph'を'vpython'で統一。
+#変更点２：graphのbackground属性は指定しない場合はwhite。y2の表示の都合でblackとして指定。
+#変更点３：'delta'属性に対してエラーが起きたので削除。
+
+from vpython import *
+
+string = "blue: sin^2(x), white: cos^2(x), red: sin(x)*cos(x)"
+graph1 = graph(title = string, xtitle = 'x', ytitle = 'y', background = color.black)
+
+y1 = gcurve ( color = color.yellow)
+y2 = gvbars ( color = color.white )
+y3 = gdots ( color =color.red)
+
+for x in arange (-5, 5, 0.1):
+	y1.plot (pos = (x, sin(x) * sin(x)))
+	y2.plot (pos = (x, cos(x) * cos(x)/3.))
+	y3.plot (pos = (x, sin(x) * cos(x)))
+
+
