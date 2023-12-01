@@ -1,0 +1,23 @@
+#変更点１：パッケージを変更。なお、今後提示するコードより、この変更の記述は省略します。
+#変更点２：display関数→graph関数へ。
+#変更点３：すべてのpos(position、つまり位置を表す)にはvector(x, y, z)としての記載が必要だそうなので加筆。
+#変更点４：color属性もvector表記が求められるため'ring','box','pyramid','ellipsoid'の4つにさらに加筆。
+#変更点５：vector表記に伴い、整数を扱うlength属性からsize属性へ変更。ChatGPTによる提案。
+
+#注記：テキストのbox関数における'lengt'は誤字です。気にしないでください。
+
+from vpython import *
+
+graph1 = graph(width=500, height=500, title='VPython 3D Shapes', range=10)
+sphere(pos=vector(0, 0, 0), radius=1, color=color.green)
+sphere(pos=vector(0, 1, -3), radius=1.5, color=color.red)
+arrow(pos=vector(3, 2, 2), axis=vector(3, 1, 1), color=color.cyan)
+cylinder(pos=vector(-3, -2, 3), axis=vector(6, -1, 5), color=color.yellow)
+cone(pos=vector(-6, -6, 0), axis=vector(-2, 1, -0.5), radius=2, color=color.magenta)
+helix(pos=vector(-5, 5, -2), axis=vector(5, 0, 0), radius=2, thickness=0.4, color=color.orange)
+ring(pos=vector(-6, 1, 0), axis=vector(1, 1, 1), radius=2, thickness=0.3, color=vector(0.3, 0.4, 0.6))
+box(pos=vector(5, -2, 2), size=vector(5, 0.4, 5), color=vector(0.4, 0.8, 0.2))
+pyramid(pos=vector(2, 5, 2), size=vector(4, 3, 2), color=vector(0.7, 0.7, 0.2))
+ellipsoid(pos=vector(-1, -7, 1), axis=vector(2, 1, 3), size=vector(4, 2, 5), color=vector(0.1, 0.9, 0.8))
+
+
