@@ -12,6 +12,8 @@ Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational Physics: P
 出版社：朝倉書店
 
 VPythonのバージョンが変わったのか、テキスト通りのコードでは実行できなかったので、都度ChatGPTに聞き、修正しつつ学習中。
+ディレクトリである'http://sites.science.oregonstate.edu/~landaur/Books/Codes/PythonCodes/'は2023年にも更新があります。
+したがって、今後も修正される、あるいは単に私が設定し損ねている可能性も大いにあります。今はただ私のPCで実行できたコードを記録します。
 私が途中で飽きるかもしれませんが、場合によっては少しずつ更新します。
 拙いreadmeですみません。問題点があればぜひご指摘ください。
 連絡先
